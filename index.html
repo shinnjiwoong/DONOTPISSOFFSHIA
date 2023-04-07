@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"
+      integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas></canvas>
+    <div id="main-div">
+      <div id="title-wrapper">
+        <h1 id="title">DO SOMETHIN'</h1>
+        <div id="color-pick-btn-wrapper">
+          <div id="color-pick-btn">CHANGE COLOR</div>
+        </div>
+        <img src="src/img/justdoit3.gif" alt="" id="gif-3" class="just-do-it" />
+        <img src="src/img/justdoit2.gif" alt="" id="gif-2" class="just-do-it" />
+        <img src="src/img/justdoit.gif" alt="" id="gif-1" class="just-do-it" />
+      </div>
+      <hr class="divider" />
+      <div id="todo-div">
+        <div id="todo-title-wrapper">WHAT DO U WANNA DO?</div>
+      </div>
+    </div>
+
+    <svg>
+      <defs>
+        <filter id="gooey">
+          <feGaussianBlur stdDeviation="72" in="SourceGraphic" result="blur1" />
+          <feColorMatrix
+            in="blur1"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 72 -18"
+          />
+        </filter>
+      </defs>
+    </svg>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
