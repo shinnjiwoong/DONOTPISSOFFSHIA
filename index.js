@@ -38,12 +38,7 @@ function playShia(){
     shia_full.play();
 }
 
-setTimeout(()=>{
-    doItGif.forEach((e)=>{
-        e.style.opacity = '100%'
-    })
 
-}, 1500)
 
 function init(){
 
@@ -73,7 +68,6 @@ function init(){
         const vy = randomNumBetween(1, 5);
 
         const particle = new Particle(x, y, radius, vy, color);
-        console.log(color)
 
         particles.push(particle)
 
@@ -110,15 +104,53 @@ let random
 
 const doorLeft = document.getElementById('door-left');
 const doorRight = document.getElementById('door-right');
+const scriptBtn = document.getElementById('script-btn');
 
 introBtn.addEventListener('click', ()=>{
+    introBtn.style.opacity = '0%'
+    introBtn.style.pointerEvents = 'none';
+    document.body.style.overflowY = 'scroll';
+    document.body.style.cursor = 'default';
+    cursor.style.display = 'none';
     doorLeft.style.transform = 'translateX(-100%)'
     doorRight.style.transform = 'translateX(100%)'
     playHaptic();
+    // Set the scroll speed factor
+    let scrollSpeed = 0.07;
+
+    // Add an event listener for the 'wheel' event
+    document.addEventListener('mousewheel', function(event) {
+
+        // Prevent default scrolling behavior
+        event.preventDefault();
+
+        // Calculate the new scroll position
+        let delta = event.deltaY;
+        let scrollPosition = window.scrollY + (delta * scrollSpeed); 
+
+        // Set the new scroll position
+        window.scrollTo({
+          top: scrollPosition
+        });
+    }, {passive:false});
+
+
+    setTimeout(()=>{
+        doItGif.forEach((e)=>{
+            e.style.opacity = '100%'
+        })
+        scriptBtn.style.opacity = '100%';
+    }, 800)
 
     setTimeout(() => {
         playShia();
     }, 1000)
+})
+
+const topBtn = document.getElementById('top-btn')
+
+topBtn.addEventListener('click', () => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
 })
 
 class Particle {
@@ -178,9 +210,6 @@ function animate(){
         particle.draw();
 
         if(particle.y + particle.radius> innerHeight){
-            // particle.y = -particle.radius;
-            // particle.x = randomNumBetween(0, canvasWidth);
-            // particle.radius = randomNumBetween(15, 50);
             particle.vy = -1 * randomNumBetween(1, 5);
         }else if(particle.y + particle.radius < 0){
             particle.y = -particle.radius;
@@ -195,6 +224,7 @@ function animate(){
 }
 
 window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
     init();
     animate();
 })
@@ -206,7 +236,7 @@ window.addEventListener('resize', ()=>{
 const cursor = document.getElementById('cursor-wrapper');
 
 window.addEventListener('mousemove', (e) => {
-    console.log('moved')
     cursor.style.top = e.clientY + 'px';
     cursor.style.left = e.clientX + 'px';
 })
+
