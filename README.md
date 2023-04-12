@@ -8,7 +8,12 @@ https://user-images.githubusercontent.com/109443641/229408358-ba4801a4-b315-4a0e
 <br>
 
 #### 프로젝트 컨셉 / Project Concept 
-세계적으로 유명한 밈이 되어버린 샤이아 라보프의 Do It을 활용한 동기부여 웹페이지.
+세계적으로 유명한 밈이 되어버린 샤이아 라보프의 Do It을 활용한 동기부여 웹페이지. <br>
+![justdoit4](https://user-images.githubusercontent.com/109443641/231449453-f5cf6105-2326-4e8b-a9e7-c00696ceb5f6.gif)
+![justdoit3](https://user-images.githubusercontent.com/109443641/231449517-2d8e06c1-91ae-4e37-bb13-7e308c40cf56.gif) <br>
+![justdoit2](https://user-images.githubusercontent.com/109443641/231449544-00c2268e-876e-4b54-91f0-38983ffd106b.gif)
+![justdoit](https://user-images.githubusercontent.com/109443641/231449564-15156117-9bb3-4d8a-9d73-69fcb8af42bd.gif)
+
 <br>
 
 #### 프로젝트 참여역할 / Project Scope
@@ -42,7 +47,9 @@ https://user-images.githubusercontent.com/109443641/229408358-ba4801a4-b315-4a0e
   
   #### CSS 
   - mix-blend-mode를 활용하여 배경의 변화에 반응하여 전체적인 텍스트와 gif의 색감이 바뀌도록 구현하였다. 
-  
+
+  #### Logo
+  - 샤이아 라보프 밈에서 가장 특징이 되었던 손 제스쳐를 모티브로 한 심플한 로고를 만들었다.
 --- 
 
  ## 프로젝트 리뷰 / Project Review
