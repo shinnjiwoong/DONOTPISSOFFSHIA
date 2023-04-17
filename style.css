@@ -14,6 +14,15 @@ body{
 font-weight: 700;
 font-style: normal; */
 
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: none;
+    border: solid 1px black;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: black;
+}
 
 canvas{
     /* display: none; */
@@ -57,7 +66,20 @@ canvas{
     z-index: 1;
     mix-blend-mode: difference;
 }
-
+/* #intro-btn:hover #intro-shia{
+    bottom: -25%;
+} */
+#intro-shia{
+    position: absolute;
+    bottom: -55%;
+    right: 0;
+    width: 30%;
+    z-index: 10;
+    transition: all 1s ease-in-out;
+}
+.up{
+    bottom: -25% !important;
+}
 #door-wrapper{
     width: 100vw;
     height: 100vh;
@@ -74,6 +96,98 @@ canvas{
     background-color: black;
 }
 
+/* SECTION 1 */
+#main-header-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    mix-blend-mode: difference;
+}
+
+#header-endnote-btn{
+    font-family: "owners-xwide", sans-serif;
+    font-weight: 700;
+    font-size: 110%;
+    color: white;
+    mix-blend-mode: difference;
+    background-color: none;
+    border: none;
+    margin: 0;
+    padding: 5px;
+    display: none;
+}
+
+#header-endnote-btn:hover{
+    text-decoration: underline 1px white;
+    cursor: grab;
+}
+
+#endnote-wrapper{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: all 0.5s cubic-bezier(.87,0,.16,.99);
+    
+}
+#endnote-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+#language-bar{
+    display: flex;
+    margin-right: 15px;
+}
+#kr, #en{
+    font-family: "owners-xwide", sans-serif;
+    color: white;
+    padding: 0px 5px;
+}
+#kr:hover, #en:hover{
+    text-decoration: underline 1px white;
+    cursor: grab;
+}
+#esc-btn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+#esc-btn:hover{
+    cursor: grab;
+    /* width: 100px;
+    height: auto; */
+}
+
+#endnote{
+    font-family: "owners-xwide",'Gothic A1', sans-serif;
+    color: white;
+    text-align: start;
+    font-size: 100%;
+    line-height: 150%;
+    font-weight: lighter;
+    padding: 20px;
+    word-break: keep-all;
+    overflow-y: scroll;
+    
+}
+
+#endnote-footer{
+    font-family: "owners-xwide",'Gothic A1', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 80%;
+}
 
 #gif-1{
     bottom: 5%;
@@ -174,6 +288,51 @@ canvas{
     }
 }
 
+/* FACE SECTION */
+
+#section-2{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#shia-face-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px ;
+}
+.shia-face{
+    width: 70%;
+    height: auto;
+}
+@keyframes faceUpAndDown {
+    from{
+        transform:translateY(0%);
+    }
+    25%{
+        transform:translateY(-1%);
+    }
+    50%{
+        transform:translateY(0%);
+    }
+    75%{
+        transform:translateY(1%);
+    }
+    to{
+        transform:translateY(0%);
+    }
+}
+
+#shia-down{
+    animation: faceUpAndDown 0.2s linear infinite;
+    position: absolute;
+}
 #script-btn{
     color: white;
     mix-blend-mode: difference;
@@ -233,7 +392,7 @@ canvas{
     font-family: "owners-xwide", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 200%;
+    font-size: 120%;
     color: white;
     mix-blend-mode: difference;
 }
@@ -242,7 +401,7 @@ canvas{
     font-family: "owners-xwide", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 200%;
+    font-size: 120%;
     color: white;
     mix-blend-mode: difference;
 }

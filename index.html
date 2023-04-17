@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/eke1lxh.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"
       integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg=="
@@ -28,10 +34,56 @@
         <div id="intro-btn-wrapper">
           <div id="intro-btn">I warned you.</div>
         </div>
+        <img src="./src/img/SHIA_UP.png" alt="" id="intro-shia" />
         <div id="door-wrapper">
           <div id="door-left" class="door"></div>
           <div id="door-right" class="door"></div>
         </div>
+      </div>
+      <div id="endnote-wrapper">
+        <div id="endnote-header">
+          <img src="./src/img/esc_btn.png" alt="" id="esc-btn" />
+          <div id="language-bar">
+            <p id="kr">KR</p>
+            <p id="en">EN</p>
+          </div>
+        </div>
+
+        <p id="endnote">
+          ENDNOTE: <br />
+          SNS를 비롯한 다양한 컨텐츠를 소비하다보면 이 세상에는 잘나가는 사람들
+          투성이처럼 보인다. <br />
+          ‘나’를 제외한 모두가 의미있는 일들을 하며 멋지게 앞으로 나아가는 것만
+          같다. <br />‘나’에게도 분명 반짝이듯 머리에 떠올랐던 그 ‘일’이 있었던
+          것 같다. <br />
+          다만, 이미 잘나가는 수많은 사람들을 보면 내가 떠올렸던 그 아이디어들은
+          하찮아보이기 시작하고, 이내 그 반짝임은 사라진다. 그렇게 우리는
+          상상했던 그 ‘일’은 수많은 의심과 불안과 ‘그럴 여유가 없다’는 이유로
+          행동으로 옮겨지지 못한다. <br />
+          너무나 흔한 일이고, 질타받아야 할 일도 아니다. <br />
+          다만… <br />
+          샤이아 라보프는 이러한 우리를 보며 속으로 분노를 삭인다. <br />
+          분노를 삭이고 삭이다 그는 결국 참지 못하고 터뜨리며 소리친다. <br />
+          DO IT! JUST DO IT! <br />
+          분노를 터뜨리는 샤이아 라보프를 보면 저러다 혈압이 터져 쓰러지는 건
+          아닐까 하는 걱정이 든다. <br />
+          이내 그의 화를 진정시키며 달래고 싶은 마음이 든다. <br />
+          그의 분노를 듣다보면 그가 원하는 건 단 한가지인 것 같다. <br />
+          우리가 주저했던 그 ‘일’을 더이상은 망설이지 않고 하는 것. <br />
+          이 웹사이트에서 그의 분노에 귀기울여 보자. <br />
+          그리고 오늘 하루만이라도 그의 화를 달래줘보자. 사람 한명 살리는 셈
+          치고. <br />
+          우리가 각자 미뤄왔던 그것을 조금이라도 한다면, 그는 금방
+          온순해질것이다.
+        </p>
+        <p id="endnote-footer">
+          * This website is NOT sponsored by NIKE at all.
+        </p>
+      </div>
+      <div id="section-1">
+        <header id="main-header-wrapper">
+          <p id="header-endnote-btn">ENDNOTE</p>
+        </header>
         <div id="gif-wrapper-1" class="gif-wrapper">
           <img
             src="src/img/justdoit3.gif"
@@ -64,8 +116,25 @@
             class="just-do-it"
           />
         </div>
+
         <div id="script-btn-wrapper">
           <p id="script-btn">Scroll down to read the full script.</p>
+        </div>
+      </div>
+      <div id="section-2">
+        <div id="shia-face-wrapper">
+          <img
+            src="./src/img/SHIA_UP.png"
+            alt=""
+            id="shia-up"
+            class="shia-face"
+          />
+          <img
+            src="./src/img/SHIA_DOWN.png"
+            alt=""
+            id="shia-down"
+            class="shia-face"
+          />
         </div>
       </div>
       <div id="script-wrapper">
@@ -122,6 +191,9 @@
         <p id="footer-message">Now, go back to work.</p>
         <p id="footer-message">or</p>
         <p id="top-btn">Back to top</p>
+        <p id="endnote-footer">
+          * This website is NOT sponsored by NIKE at all.
+        </p>
       </div>
     </div>
     <div id="cursor-wrapper">
