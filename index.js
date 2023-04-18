@@ -170,6 +170,23 @@ topBtn.addEventListener('click', () => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
 })
 
+// CLASSES
+
+class Vocal {
+    constructor(name, src){
+        this.name = name;
+        this.src = src;
+        this.audio = new Audio(this.src);
+        this.isPlaying = false
+    }
+    play(){
+        this.audio.play()
+    }
+    pause(){
+        this.audio.pause()
+    }
+}
+
 class Particle {
     constructor(x, y, radius, vy, color){
         this.r = mouseX;

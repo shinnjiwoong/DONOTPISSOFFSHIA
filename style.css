@@ -244,24 +244,14 @@ canvas{
     color: white;
     /* cursor: grab; */
 }
-.vocal-btn{
-    display: none;
-    font-size: 200%;
-    font-weight: lighter;
-    background-color: none;
-    padding: 0px 10px;
-    color: white;
-    margin: 50px;
-    z-index: 0;
-    border: none;
-    mix-blend-mode: difference;
-}
+
 
 
 
 #script-btn-wrapper{
+    display: none;
     animation-name: UpAndDown;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     position:absolute;
@@ -295,13 +285,52 @@ canvas{
     width: 100vw;
     height: 100vh;
 }
+#vocal-header-title{
+    padding-top: 50px;
+    animation-name: UpAndDown;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    font-family: owners-xwide, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 200%;
+    color: white;
+    mix-blend-mode: difference;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#vocal-btn-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
 
+.vocal-btn{
+    font-family: owners-xwide, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    mix-blend-mode: difference;
+    font-size: 200%;
+    padding: 10px 50px;
+    margin: 10px 50px;
+    transition: all 0.5s cubic-bezier(.87,0,.16,.99);
+    border: solid 2px white;
+    border-radius: 50%;
+}
+.vocal-btn:hover{
+    text-decoration: underline 2px white;
+    cursor: grab;
+}
 #shia-face-wrapper{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%
-    );
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -358,12 +387,12 @@ canvas{
 
 #script{
     font-family: "owners-xwide", sans-serif;
-    font-weight: 700;
+    font-weight: 300;
     font-style: normal;
     margin-top: 100px;
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 220%;
+    font-size: 150%;
     text-align: center;
     color: white;
     mix-blend-mode: difference;
