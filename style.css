@@ -186,7 +186,26 @@ canvas{
     font-family: "owners-xwide",'Gothic A1', sans-serif;
     color: white;
     text-align: center;
-    font-size: 80%;
+    font-size: 100%;
+    line-height: 200%;
+}
+#endnote-footer-link{
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+#endnote-footer-link:hover{
+    text-decoration: underline 1px white;
+}
+#endnote-footer-logo-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#endnote-footer-logo{
+    transform: translateY(-30%);
+    width: 250px;
+    height: auto;
 }
 
 #gif-1{
@@ -294,7 +313,7 @@ canvas{
     font-family: owners-xwide, sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 200%;
+    font-size: 150%;
     color: white;
     mix-blend-mode: difference;
     position: absolute;
@@ -311,7 +330,7 @@ canvas{
 
 .vocal-btn{
     font-family: owners-xwide, sans-serif;
-    font-weight: 300;
+    font-weight: 700;
     font-style: normal;
     color: white;
     mix-blend-mode: difference;
@@ -319,8 +338,9 @@ canvas{
     padding: 10px 50px;
     margin: 10px 50px;
     transition: all 0.5s cubic-bezier(.87,0,.16,.99);
-    border: solid 2px white;
+    /* border: solid 2px white; */
     border-radius: 50%;
+    text-align: center;
 }
 .vocal-btn:hover{
     text-decoration: underline 2px white;
@@ -359,7 +379,7 @@ canvas{
 }
 
 #shia-down{
-    animation: faceUpAndDown 0.2s linear infinite;
+    /* animation: faceUpAndDown 0.2s linear infinite; */
     position: absolute;
 }
 #script-btn{
@@ -395,7 +415,7 @@ canvas{
     font-size: 150%;
     text-align: center;
     color: white;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     line-height: 200%;
 }
 
@@ -405,25 +425,39 @@ canvas{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 
-}
-
-#footer{
-    width: 100px;
-    height: auto;
-    z-index: 1100;
-    mix-blend-mode: difference;
-    pointer-events: none;
 }
 
 #footer-message{
     font-family: "owners-xwide", sans-serif;
-    font-weight: 300;
+    font-weight: 700;
     font-style: normal;
-    font-size: 120%;
+    font-size: 700%;
     color: white;
-    mix-blend-mode: difference;
+    text-align: center;
+    margin: 0;
+    /* mix-blend-mode: difference; */
+}
+
+#footer-logo-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer{
+    width: 70px;
+    height: auto;
+    z-index: 1100;
+    /* mix-blend-mode: difference; */
+    pointer-events: none;
+}
+
+#footer-logo{
+    width: 200px;
+    height: auto;
+    /* mix-blend-mode: difference; */
 }
 
 #top-btn{
@@ -432,7 +466,7 @@ canvas{
     font-style: normal;
     font-size: 120%;
     color: white;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 }
 #top-btn:hover{
     text-decoration: underline 2px white;

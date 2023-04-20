@@ -1,10 +1,96 @@
 
-// ENDNOTE 
-const endnote_kr = 'ENDNOTE: <br />SNS에서는 모두가 슈퍼스타처럼 보인다. <br />‘나’를 제외한 모두가 의미있는 일들을 하며 멋지게 앞으로 나아가는 것만 같다. <br />‘나’에게도 분명 반짝이듯 머리에 떠올랐던 그 ‘일’이 있었던 것 같다. <br />다만, 이미 잘나가는 수많은 사람들을 보면 내가 떠올렸던 그 아이디어들은 하찮아보이기 시작하고, 이내 그 반짝임은 사라진다. 그렇게 우리는 상상했던 그 ‘일’은 수많은 의심과 불안과 ‘그럴 여유가 없다’는 이유로 행동으로 옮겨지지 못한다. <br />너무나 흔한 일이고, 질타받아야 할 일도 아니다. <br />다만… <br />샤이아 라보프는 이러한 우리를 보며 속으로 분노를 삭인다. <br />분노를 삭이고 삭이다 그는 결국 참지 못하고 터뜨리며 소리친다. <br />DO IT! JUST DO IT! <br />분노를 터뜨리는 샤이아 라보프를 보면 저러다 혈압이 터져 쓰러지는 건 아닐까 하는 걱정이 든다. <br />이내 그의 화를 진정시키며 달래고 싶은 마음이 든다. <br />그의 분노를 듣다보면 그가 원하는 건 단 한가지인 것 같다. <br />우리가 주저했던 그 ‘일’을 더이상은 망설이지 않고 하는 것. <br />이 웹사이트에서 그의 분노에 귀기울여 보자. <br />그리고 오늘 하루만이라도 그의 화를 달래줘보자. 사람 한명 살리는 셈 치고. <br />우리가 각자 미뤄왔던 그것을 조금이라도 한다면, 그는 금방 온순해질 것이다.';
-const endnote_en = 'ENDNOTE: <br />People in SNS world are all super stars. <br>Everyone seems to go on achieving meaningful works except ‘me’. <br>I also had one of those beautiful ideas of work. <br>But, feelings of doubt, anxiety and lack of time stopped me from actually working on it. <br>This happens to all of us and it’s not something to be blamed at. <br>But….<br>Shia LaBeouf gets mad upon us. <br>He’s getting pissed off and shouting at us like <br>”DO IT! JUST DO IT!”<br>Let’s listen to his anger in this website, and calm him down by doing something what we procrastinated TODAY. <br>Not for ourselves, but, for saving Shia’s mental peace. '
+// DOM 
+const endnote_kr = 'ENDNOTE: <br />이 웹사이트는 샤이아 라보프의 분노를 포함하고 있습니다. <br>그의 분노는 미래에 대한 불안과 자기 자신에 대한 의심으로 인해 빛바래져가는 우리의 수많은 아이디어를 그대로 두지 말고 지금 당장 뛰어들라고 말합니다. <br>당신의 아름다운 아이디어는 무엇입니까? <br>당장 그걸 하지 않으면 샤이아는 점점 더 화가 날 거에요. <br>이제 당장 뭐라도 하며 그의 화를 좀 달래줘봅시다.';
+const endnote_en = 'ENDNOTE: <br />This website contains Shia LaBeouf’s rage. <br>His anger shouts at us to dive into our beautiful ideas that we procrastinated, due to the anxiety about the future and self-doubt. <br>What was your beautiful idea? <br>If you don’t do something to achieve your idea, Shia will be pissed off even more. <br>Let’s calm him down.'
 const endnoteKrBtn = document.getElementById('kr')
 const endnoteEnBtn = document.getElementById('en')
 const endnote = document.getElementById('endnote');
+const doorLeft = document.getElementById('door-left');
+const doorRight = document.getElementById('door-right');
+const scriptBtn = document.getElementById('script-btn');
+const topBtn = document.getElementById('top-btn')
+const vocalBtns = document.querySelectorAll('.vocal-btn');
+const shiaDown = document.getElementById('shia-down');
+const introShia = document.getElementById('intro-shia');
+const endnoteBtn = document.getElementById('header-endnote-btn');
+const endnoteWrapper = document.getElementById('endnote-wrapper');
+const endnoteEsc = document.getElementById('esc-btn');
+const cursor = document.getElementById('cursor-wrapper');
+
+// CANVAS 
+const canvas = document.querySelector('canvas')
+const ctx = canvas.getContext('2d');
+const dpr = window.devicePixelRatio;
+const introBtn = document.querySelector('#intro-btn');
+const doItGif = document.querySelectorAll('.just-do-it');
+const feGaussian = document.querySelector('feGaussianBlur');
+const feColorMatrix = document.querySelector('feColorMatrix');
+const controls = new function(){
+    this.blurValue = 40;
+    this.alphaChannel = 100;
+    this.alphaOffset = -23;
+}
+
+// CLASSES
+class Vocal {
+    constructor(name, src){
+        this.name = name;
+        this.src = src;
+        this.audio = new Audio(this.src);
+        this.isPlaying = false
+        
+    }
+    play(){
+        this.audioDuration = Math.ceil(this.audio.duration);
+        console.log(`playing ${this.name}`)
+        console.log(this.audio)
+        console.log(`duration : ${this.audioDuration}`);
+        // this.audio.play()
+    }
+}
+
+const vocal_1 = new Vocal(vocalBtns[0].innerText, 'src/audio/cursor_haptic.mp3');
+const vocal_2 = new Vocal(vocalBtns[1].innerText, 'src/audio/cursor_haptic.mp3');
+const vocal_3 = new Vocal(vocalBtns[2].innerText, 'src/audio/cursor_haptic.mp3');
+const vocal_4 = new Vocal(vocalBtns[3].innerText, 'src/audio/cursor_haptic.mp3');
+const vocal_5 = new Vocal(vocalBtns[4].innerText, 'src/audio/cursor_haptic.mp3');
+const vocal_6 = new Vocal(vocalBtns[5].innerText, 'src/audio/cursor_haptic.mp3');
+
+const vocals = [vocal_1, vocal_2, vocal_3, vocal_4, vocal_5, vocal_6];
+
+class Particle {
+    constructor(x, y, radius, vy, color){
+        this.r = mouseX;
+        this.g = mouseY;
+        this.b = random;
+
+        this.color = color
+        this.x = x;
+        this.y = y;
+        this.radius = radius
+        this.vy = vy;
+        this.acc = 1.01
+        // if this.acc = 음수 -> 마찰력 || 양수 -> 중력
+    }
+    update(){
+        this.vy *= this.acc
+        this.y += this.vy;
+    }
+    draw(){
+
+        ctx.beginPath();
+        // 나 이제 그리기 시작한다!
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI / 180 * 360);
+        // 라디안이라서 그럼
+        ctx.fillStyle = this.color
+        ctx.fill();
+        ctx.closePath(); 
+    }
+}
+
+// AUDIO
+const cursorHaptic = new Audio('src/audio/cursor_haptic.mp3');
+const shia_full = new Audio('src/audio/shia_full.mp3');
 
 endnoteKrBtn.addEventListener('click', ()=>{
     endnote.innerHTML = endnote_kr;
@@ -13,15 +99,7 @@ endnoteEnBtn.addEventListener('click', ()=>{
     endnote.innerHTML = endnote_en;
 })
 
-
 // Intro Canvas
-const canvas = document.querySelector('canvas')
-const ctx = canvas.getContext('2d');
-const dpr = window.devicePixelRatio;
-
-
-const introBtn = document.querySelector('#intro-btn');
-const doItGif = document.querySelectorAll('.just-do-it');
 
 let canvasWidth = innerWidth;
 let canvasHeight = innerHeight;
@@ -40,10 +118,7 @@ let particlesColors = [
 ]
 
 // Audio
-const cursorHaptic = new Audio('src/audio/cursor_haptic.mp3');
-const shia_full = new Audio('src/audio/shia_full.mp3');
 shia_full.loop = 'true'
-
 
 function playHaptic() {
     cursorHaptic.play();
@@ -53,7 +128,7 @@ function playShia(){
 }
 
 
-
+// INIT FUNCTION
 function init(){
 
     // Initializing Canvas
@@ -88,18 +163,6 @@ function init(){
     }
 }
 
-
-
-const feGaussian = document.querySelector('feGaussianBlur');
-const feColorMatrix = document.querySelector('feColorMatrix');
-
-
-const controls = new function(){
-    this.blurValue = 40;
-    this.alphaChannel = 100;
-    this.alphaOffset = -23;
-}
-
 // let gui = new dat.GUI();
 
 // gui.add(controls, 'blurValue', 0, 100).onChange(value => {
@@ -115,10 +178,6 @@ const controls = new function(){
 let mouseX
 let mouseY
 let random
-
-const doorLeft = document.getElementById('door-left');
-const doorRight = document.getElementById('door-right');
-const scriptBtn = document.getElementById('script-btn');
 
 introBtn.addEventListener('click', ()=>{
     introShia.style.opacity = '0%';
@@ -164,7 +223,7 @@ introBtn.addEventListener('click', ()=>{
     }, 1000)
 })
 
-const topBtn = document.getElementById('top-btn')
+
 
 topBtn.addEventListener('click', () => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
@@ -172,50 +231,25 @@ topBtn.addEventListener('click', () => {
 
 // CLASSES
 
-class Vocal {
-    constructor(name, src){
-        this.name = name;
-        this.src = src;
-        this.audio = new Audio(this.src);
-        this.isPlaying = false
-    }
-    play(){
-        this.audio.play()
-    }
-    pause(){
-        this.audio.pause()
-    }
-}
 
-class Particle {
-    constructor(x, y, radius, vy, color){
-        this.r = mouseX;
-        this.g = mouseY;
-        this.b = random;
 
-        this.color = color
-        this.x = x;
-        this.y = y;
-        this.radius = radius
-        this.vy = vy;
-        this.acc = 1.01
-        // 음수 -> 마찰력 || 양수 -> 중력
-    }
-    update(){
-        this.vy *= this.acc
-        this.y += this.vy;
-    }
-    draw(){
+vocalBtns.forEach(btn => {
+    btn.addEventListener('click', ()=>{
+        vocals.forEach(vocal => {
+            if(btn.innerText == vocal.name){
+                shiaDown.style.animation = `faceUpAndDown 0.2s linear 10`;
+                vocal.play();
+                setTimeout(function(){
+                    console.log(vocal.audioDuration * 1000)
+                    shiaDown.style.animation = 'none';
+                }, vocal.audioDuration*1000)
+                
+            }
+        })
+    })
+})
 
-        ctx.beginPath();
-        // 나 이제 그리기 시작한다!
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI / 180 * 360);
-        // 라디안이라서 그럼
-        ctx.fillStyle = this.color
-        ctx.fill();
-        ctx.closePath(); 
-    }
-}
+
 
 const randomNumBetween = (min, max) => {
     return Math.random()*(max - min + 1) + min
@@ -257,7 +291,7 @@ function animate(){
     then = now - (delta % interval);
 }
 
-const introShia = document.getElementById('intro-shia');
+
 
 window.addEventListener('load', () => {
     window.scrollTo(0, 0);
@@ -277,16 +311,14 @@ window.addEventListener('resize', ()=>{
     init();
 })
 
-const cursor = document.getElementById('cursor-wrapper');
+
 
 window.addEventListener('mousemove', (e) => {
     cursor.style.top = e.clientY + 'px';
     cursor.style.left = e.clientX + 'px';
 })
 
-const endnoteBtn = document.getElementById('header-endnote-btn');
-const endnoteWrapper = document.getElementById('endnote-wrapper');
-const endnoteEsc = document.getElementById('esc-btn');
+
 
 endnoteBtn.addEventListener('click', ()=>{
     endnoteWrapper.style.transform = 'translateX(0%)';
