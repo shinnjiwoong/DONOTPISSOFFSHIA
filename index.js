@@ -1,7 +1,7 @@
 
 // DOM 
-const endnote_kr = 'ENDNOTE: <br />이 웹사이트는 샤이아 라보프의 분노를 포함하고 있습니다. <br>그의 분노는 미래에 대한 불안과 자기 자신에 대한 의심으로 인해 빛바래져가는 우리의 수많은 아이디어를 그대로 두지 말고 지금 당장 뛰어들라고 말합니다. <br>당신의 아름다운 아이디어는 무엇입니까? <br>당장 그걸 하지 않으면 샤이아는 점점 더 화가 날 거에요. <br>이제 당장 뭐라도 하며 그의 화를 좀 달래줘봅시다.';
-const endnote_en = 'ENDNOTE: <br />This website contains Shia LaBeouf’s rage. <br>His anger shouts at us to dive into our beautiful ideas that we procrastinated, due to the anxiety about the future and self-doubt. <br>What was your beautiful idea? <br>If you don’t do something to achieve your idea, Shia will be pissed off even more. <br>Let’s calm him down.'
+const endnote_kr = 'ENDNOTE: <br />이 웹사이트는 샤이아 라보프의 분노를 포함하고 있습니다. <br>그의 분노는 미래에 대한 불안과 자기 자신에 대한 의심으로 인해 빛바래져가는 우리의 수많은 아이디어를 그대로 두지 말고 지금 당장 뛰어들라고 말합니다. <br>당신의 아름다운 아이디어는 무엇입니까? <br>한때 빛이 났었지만, 미뤄오는 동안 점점 바래져가던 아이디어를 다시 쳐다보지 않는다면, 샤이아의 분노는 점점 더 커질 것입니다.';
+const endnote_en = 'ENDNOTE: <br />This website contains Shia LaBeouf’s rage. <br>His anger shouts at us to dive into our beautiful ideas that we procrastinated, due to the anxiety about the future and self-doubt. <br>What was your beautiful idea? <br>If you keep ignoring your idea that was once bright, Shia will be pissed off even more. '
 const endnoteKrBtn = document.getElementById('kr')
 const endnoteEnBtn = document.getElementById('en')
 const endnote = document.getElementById('endnote');
