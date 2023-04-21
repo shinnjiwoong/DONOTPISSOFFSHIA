@@ -198,7 +198,7 @@ canvas{
     line-height: 200%;
 }
 #endnote-footer-link{
-    font-weight: 700;
+    font-weight: 300;
     color: white;
     text-decoration: none;
     transition: all 0.2s ease-in-out;
@@ -214,7 +214,7 @@ canvas{
 }
 #endnote-footer-logo{
     transform: translateY(-30%);
-    width: 150px;
+    width: 100px;
     height: auto;
 }
 
@@ -254,7 +254,8 @@ canvas{
     z-index: -10;
     border-radius: 30px;
     overflow: hidden;
-    mix-blend-mode: difference;
+    filter: invert(1);
+    mix-blend-mode: color-burn;
     cursor: grab;
 }
 
@@ -285,7 +286,22 @@ canvas{
     /* cursor: grab; */
 }
 
+#video-section{
+    margin-bottom: 100px;
+    mix-blend-mode:color-burn;
+}
 
+#video-fixed-wrapper{
+    mix-blend-mode:color-burn;
+}
+#video{
+    border-radius: 50%;
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+    filter: invert(1);
+    mix-blend-mode:color-burn;
+}
 
 
 #script-btn-wrapper{
@@ -298,6 +314,30 @@ canvas{
     bottom: 10%;
     left: 50%;
     mix-blend-mode: difference;
+}
+
+#script-lang-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.script-lang{
+    font-family: owners-xwide, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 150%;
+    color: white;
+    padding: 5px 20px;
+    margin: 0px 15px;
+    border: solid 2px white;
+    border-radius: 50%;
+}
+
+.script-lang:hover{
+    mix-blend-mode: difference;
+    cursor: grab;
 }
 
 @keyframes UpAndDown {
@@ -321,6 +361,7 @@ canvas{
 /* FACE SECTION */
 
 #section-2{
+    margin-top: 100px;
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -336,7 +377,7 @@ canvas{
     font-style: normal;
     font-size: 150%;
     color: white;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     position: absolute;
     top: 0%;
     left: 50%;
@@ -442,10 +483,10 @@ canvas{
 }
 
 #script{
-    font-family: "owners-xwide", sans-serif;
+    font-family: "owners-xwide",'Gothic A1', sans-serif;
     font-weight: 300;
     font-style: normal;
-    margin-top: 100px;
+    margin-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
     font-size: 150%;
@@ -453,6 +494,10 @@ canvas{
     color: white;
     /* mix-blend-mode: difference; */
     line-height: 200%;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    padding-top: 45px;
+    padding-bottom: 45px;
 }
 
 #footer-wrapper{
@@ -483,16 +528,18 @@ canvas{
 }
 
 #footer{
-    width: 70px;
+    width: 80px;
     height: auto;
     z-index: 1100;
     /* mix-blend-mode: difference; */
     pointer-events: none;
+    padding: 0px 10px;
 }
 
 #footer-logo{
-    width: 200px;
+    width: 100px;
     height: auto;
+    padding: 0px 10px;
     /* mix-blend-mode: difference; */
 }
 
