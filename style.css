@@ -187,7 +187,7 @@ canvas{
     padding: 20px;
     word-break: keep-all;
     overflow-y: scroll;
-    
+    letter-spacing: 1px;
 }
 
 #endnote-footer{
@@ -196,6 +196,7 @@ canvas{
     text-align: center;
     font-size: 100%;
     line-height: 200%;
+    letter-spacing: 1px;
 }
 #endnote-footer-link{
     font-weight: 300;
@@ -288,7 +289,7 @@ canvas{
 
 #video-section{
     margin-bottom: 100px;
-    mix-blend-mode:color-burn;
+    mix-blend-mode:difference;
 }
 
 #video-fixed-wrapper{
@@ -299,8 +300,8 @@ canvas{
     width: 1000px;
     display: block;
     margin: 0 auto;
-    filter: invert(1);
-    mix-blend-mode:color-burn;
+    filter: invert(0) contrast(500%);
+    mix-blend-mode:difference;
 }
 
 
@@ -498,6 +499,7 @@ canvas{
     border-bottom: solid 1px white;
     padding-top: 45px;
     padding-bottom: 45px;
+    letter-spacing: 1px;
 }
 
 #footer-wrapper{

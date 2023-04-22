@@ -62,6 +62,9 @@ const vocal_6 = new Vocal(vocalBtns[5].innerText, 'src/audio/shia_yes.mp3');
 
 const vocals = [vocal_1, vocal_2, vocal_3, vocal_4, vocal_5, vocal_6];
 
+const fire = new Audio('src/audio/FireFireplace_S08FI.16.wav');
+
+
 class Particle {
     constructor(x, y, radius, vy, color){
         this.r = mouseX;
@@ -194,32 +197,15 @@ introBtn.addEventListener('click', ()=>{
     doorRight.style.transform = 'translateX(100%)'
     endnoteBtn.style.display = 'inline-block'
     playHaptic();
-    // Set the scroll speed factor
-    let scrollSpeed = 0.1;
-
-    // Add an event listener for the 'wheel' event
-    // document.addEventListener('mousewheel', function(event) {
-
-    //     // Prevent default scrolling behavior
-    //     event.preventDefault();
-
-    //     // Calculate the new scroll position
-    //     let delta = event.deltaY;
-    //     let scrollPosition = window.scrollY + (delta * scrollSpeed); 
-
-    //     // Set the new scroll position
-    //     window.scrollTo({
-    //       top: scrollPosition
-    //     });
-    // }, {passive:false});
-
-
+ 
     setTimeout(()=>{
         doItGif.forEach((e)=>{
             e.style.opacity = '100%'
         })
         scriptBtn.style.opacity = '100%';
         introShia.style.display = 'none'
+        fire.play();
+        fire.loop = true;
     }, 800)
 
 })
@@ -295,7 +281,7 @@ function animate(){
 // Event Listeners
 
 // 비디오 스크롤 재생
-const playback = 200;
+const playback = 100;
 const video = document.getElementById('video');
 const videoFixedWrapper = document.getElementById('video-fixed-wrapper');
 const videoSection = document.getElementById('video-section');
