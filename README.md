@@ -9,6 +9,7 @@ https://user-images.githubusercontent.com/109443641/233824109-aa906a5f-914d-4f9e
 
 #### 프로젝트 컨셉 / Project Concept 
 세계적으로 유명한 밈이 되어버린 샤이아 라보프의 Do It 밈을 활용하여 우리가 삶을 살아가면서 번뜩 떠올랐던 아이디어들을 미루지 말고 조금씩이나마 실현시켜보자는 메세지를 전하고자 했다. <br>
+이 프로젝트 또한 나에게는 번뜩 떠올랐던 아이디어에서 시작했던 것이었다. <br>
 ![justdoit4](https://user-images.githubusercontent.com/109443641/231449453-f5cf6105-2326-4e8b-a9e7-c00696ceb5f6.gif)
 ![justdoit3](https://user-images.githubusercontent.com/109443641/231449517-2d8e06c1-91ae-4e37-bb13-7e308c40cf56.gif) <br>
 ![justdoit2](https://user-images.githubusercontent.com/109443641/231449544-00c2268e-876e-4b54-91f0-38983ffd106b.gif)
