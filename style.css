@@ -26,7 +26,6 @@ font-style: normal; */
 }
 
 canvas{
-    /* display: none; */
     filter: url('#gooey');
     position: fixed;
     top: 0;

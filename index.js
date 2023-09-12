@@ -77,7 +77,7 @@ class Particle {
         this.radius = radius
         this.vy = vy;
         this.acc = 1.01
-        // if this.acc = 음수 -> 마찰력 || 양수 -> 중력
+        // if this.acc = 음수 -> 마찰력 or 양수 -> 중력
     }
     update(){
         this.vy *= this.acc
@@ -86,9 +86,7 @@ class Particle {
     draw(){
 
         ctx.beginPath();
-        // 나 이제 그리기 시작한다!
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI / 180 * 360);
-        // 라디안이라서 그럼
         ctx.fillStyle = this.color
         ctx.fill();
         ctx.closePath(); 
@@ -169,18 +167,6 @@ function init(){
 
     }
 }
-
-// let gui = new dat.GUI();
-
-// gui.add(controls, 'blurValue', 0, 100).onChange(value => {
-//     feGaussian.setAttribute('stdDeviation', value);
-// })
-// gui.add(controls, 'alphaChannel', 1, 200).onChange(value => {
-//     feColorMatrix.setAttribute('values', `1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 ${value} ${controls.alphaOffset}`)
-// })
-// gui.add(controls, 'alphaOffset', -50, 50).onChange(value => {
-//     feColorMatrix.setAttribute('values', `1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 ${controls.alphaChannel} ${value}`)
-// })
 
 let mouseX
 let mouseY
@@ -269,7 +255,7 @@ function animate(){
         }else if(particle.y + particle.radius < 0){
             particle.y = -particle.radius;
             particle.x = randomNumBetween(0, canvasWidth);
-            particle.radius = randomNumBetween(15, 50);
+            particle.radius = randomNumBetween(35, 50);
             particle.vy = randomNumBetween(1, 5);
         }
     })
